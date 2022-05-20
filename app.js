@@ -19,26 +19,32 @@ function AdicionarItem(titulo){
     <span id="close-btn">X</span>` 
   document.querySelector('.list').appendChild(item)
   }
-
-  const titles = document.querySelectorAll('#titulo');
-  titles.forEach(title => {
-  title.addEventListener('click', function(){
-    if(title.classList.contains('finish')){
-      title.classList.remove('finish')
-    }else{
-      title.classList.add('finish')
-    }
-  })
-})
-
 const closeButtons = document.querySelectorAll('#close-btn');
 closeButtons.forEach(button => {
   button.addEventListener('click', function(){
     console.log(button.parentElement.remove())
   })
 })
-
+var title = document.querySelectorAll('h1');
+title.forEach(tit => {
+  tit.onclick = function(){
+    tit.classList.toggle('finish')
+  }
+})
 
 document.querySelector('#input').value = ''
 
 }
+// const titles = document.querySelectorAll('#titulo');
+//   titles.forEach(title => {
+//   title.addEventListener('click', function(){
+//     if(title.classList.contains('finish')){
+//       title.classList.remove('finish')
+//     }else{
+//       title.classList.add('finish')
+//     }
+//   })
+// })
+
+
+

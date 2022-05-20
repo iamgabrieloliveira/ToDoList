@@ -39,6 +39,7 @@
 }
 .item:hover{
   box-shadow: 0px 0px 10px 5px rgba(130, 128, 128, 0.216);
+  transform: translateY(-3px);
 }
 #input{
   border: 1px solid rgb(255, 255, 255);
@@ -46,6 +47,7 @@
   padding: 15px 20px;
   font-family: Poppins, sans-serif;
   font-size: 15px;
+  color: white;
 }
 #button{
   cursor: pointer;
@@ -71,6 +73,6 @@
   font-size: 17px;
   cursor: pointer;
 }
-#titulo.finish{
+h1.finish{
   text-decoration: line-through;
 }
