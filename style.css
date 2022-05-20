@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(40, 40, 40);
+  color: white;
+}
+.container{
+ position: absolute;
+ top: 10px;
+ left: 50%;
+ transform: translateX(-50%);
+ display: flex;
+ flex-direction: column;
+ gap: 50px;
+}
+#title{
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins, sans-serif;
+  gap: 40px;
+  width: 100%;
+  padding: 15px 10px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  transition: .6s;
+}
+.item:hover{
+  box-shadow: 0px 0px 10px 5px rgba(130, 128, 128, 0.216);
+}
+#input{
+  border: 1px solid rgb(255, 255, 255);
+  width: 250px;
+  padding: 15px 20px;
+  font-family: Poppins, sans-serif;
+  font-size: 15px;
+}
+#button{
+  cursor: pointer;
+  background: rgb(255, 253, 253);
+  color: white;
+  transition: .2s;
+}
+#button:hover{
+  background: white;
+  color: black;
+}
+.input-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  gap: 20px;
+}
+#close-btn{
+  cursor: pointer;
+}
+#titulo{
+  font-size: 17px;
+  cursor: pointer;
+}
+#titulo.finish{
+  text-decoration: line-through;
+}
