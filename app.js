@@ -1,5 +1,3 @@
-
-
 window.addEventListener('keydown', function(e){
   if(e.code == 'Enter'){
   AdicionarItem(document.querySelector('#input').value)
@@ -7,7 +5,6 @@ window.addEventListener('keydown', function(e){
     return
   }
 })
-
 function AdicionarItem(titulo){
   if(titulo == ''){
     window.alert('Impossível cadastrar tarefas vazias !!!')
@@ -19,32 +16,26 @@ function AdicionarItem(titulo){
     <span id="close-btn">X</span>` 
   document.querySelector('.list').appendChild(item)
   }
-const closeButtons = document.querySelectorAll('#close-btn');
-closeButtons.forEach(button => {
-  button.addEventListener('click', function(){
-    console.log(button.parentElement.remove())
-  })
-})
-var title = document.querySelectorAll('h1');
-title.forEach(tit => {
+
+  RemoverTarefa()
+  MarcarTarefa()
+
+  document.querySelector('#input').value = ''
+}
+function MarcarTarefa(){
+  var title = document.querySelectorAll('h1');
+  title.forEach(tit => {
   tit.onclick = function(){
     tit.classList.toggle('finish')
   }
 })
-
-document.querySelector('#input').value = ''
-
 }
-// const titles = document.querySelectorAll('#titulo');
-//   titles.forEach(title => {
-//   title.addEventListener('click', function(){
-//     if(title.classList.contains('finish')){
-//       title.classList.remove('finish')
-//     }else{
-//       title.classList.add('finish')
-//     }
-//   })
-// })
-
-
+function RemoverTarefa(){
+  const closeButtons = document.querySelectorAll('#close-btn');
+  closeButtons.forEach(button => {
+  button.addEventListener('click', function(){
+    console.log(button.parentElement.remove())
+  })
+})
+}
 
